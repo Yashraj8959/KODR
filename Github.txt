@@ -1,0 +1,2 @@
+stages-->
+unmanaged --> [git init] --> managed
