@@ -1,2 +1,16 @@
 stages-->
 unmanaged --> [git init] --> managed
+unstaged --> [git add .] --> staged
+staged --> [git commit -m "message"] --> committed
+
+
+
+pull strategies -->
+merge -> git config pull.rebase false -> creates new commit
+rebase -> git config pull.rebase true -> changes head
+fast forward -> doesn't backtrack / for linear 
+
+
+branching--> To keep away from production 
+switch branches--> git switch branch_name / git checkout branch_name
+merging-> git pull origin branch_name --no-rebase
