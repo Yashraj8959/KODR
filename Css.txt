@@ -1,0 +1,19 @@
+height --> only when necessary
+
+vh --> viewport height 
+vw --> viewport width
+
+rem (takes html font size)--> parents
+em (takes parent font size)--> childs
+
+
+function ->
+font size : clamp(min, variable, max)
+font size : clamp(10px, 1vw, 20px)
+font size : min(variable, 10px) --> minimum value has been taken
+font size : max(variable, 20px) --> maximum value has been taken
+
+
+Re-style the css
+style.scss --> sassy css [preprocessor for the css and it provides modularity]
+
