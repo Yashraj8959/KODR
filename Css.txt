@@ -1,7 +1,11 @@
 height --> only when necessary
 
-vh --> viewport height 
-vw --> viewport width
+units
+% --> takes unit from parent
+vh --> viewport height [takes from screen]
+vw --> viewport width [takes from screen]
+em --> takes unit from parent
+rem --> takes unit from html
 
 rem (takes html font size)--> parents
 em (takes parent font size)--> childs
@@ -16,4 +20,8 @@ font size : max(variable, 20px) --> maximum value has been taken
 
 Re-style the css
 style.scss --> sassy css [preprocessor for the css and it provides modularity]
+
+flex => grid => position
+
+
 
