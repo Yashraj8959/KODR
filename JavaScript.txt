@@ -1,0 +1,18 @@
+Basics-->
+console.log, console.warn, console.error, alert("message"), prompt(),
+template literals ` `
+
+
+Basic Data Types--> primitives and reference
+let, const, var, number, string, boolean, null--> kuch dhundo aur naa mile to wo null return karega, undefined-->variable banao aur value assign naa ki ho, symbol, BigInt,
+typeof, isNaN, isFinite, isInteger, isSafeInteger,
+
+variables
+Declaration and initialization
+var-->old js, let, const
+let a;
+let a=12;  --> it gives error means doesn't allow to redeclare but var allows to redeclare
+const--> constant variable, once value assign ho jata hai to usse change naa kiya
+
+scope
+local and global scope
