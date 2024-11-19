@@ -23,5 +23,17 @@ style.scss --> sassy css [preprocessor for the css and it provides modularity]
 
 flex => grid => position
 
+Fluid layout ---> it doesn't waste extra space
+flex-grow: 1; [ 1 is ture]
+flex-shrink: 0; [ 0 means false]
+flex-basis: 100px;
+
+flex: 1 0 100px;
+
+grid --> it creates blank spaces
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(100px 1fr));
+grid-template-rows: 1fr 2fr 3fr;
+
 
 
