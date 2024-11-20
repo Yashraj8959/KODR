@@ -15,4 +15,83 @@ let a=12;  --> it gives error means doesn't allow to redeclare but var allows to
 const--> constant variable, once value assign ho jata hai to usse change naa kiya
 
 scope
-local and global scope
+local --> {-----} and global scope
+block scope with let and const
+let and const--> block scope or nearest curly braces, var-->  function scope or parent function scope
+
+js--> interpreted language
+
+<------------operators-------------->
+arithmetic operators
+
+------->addition, subtraction, multiplication, division, modulus, exponentiation, increment, decrement, assignment operators
+
+comparison operators
+
+-------->equal to(==), not equal to(!=), greater than( > ), less than( < ), greater than or equal to( >= ), less
+         than or equal to ( <= ), strict equal to ( === ), strict not equal to ( !== )
+
+logical operators
+
+-------->and ( && ), or ( || ), not, bitwise operators
+assignment operators
+
+---------> = , +=, -=, *=, /=, %= 
+
+conditional (ternary) operators ---> ?:
+-----> condition ? console.log("if condition is true ") : console.log("if condition is false")
+       12>=13 ? console.log("fkdklfj") : console.log("fgdfgfdf")
+
+conditional statements
+if, else if, else, switch, switch case, default, break, continue, return,
+
+
+Loops
+for----> start end change, while, do-while, for...of, for...in,
+
+
+function Declaration and Expression
+function declaration--> function name() { code }
+function expression--> var fun = function() { code }
+
+Anonymous Function----->
+function() {
+    anonymous function
+}
+
+Arrow function---->
+var fun = () => {
+    code ---> ()--> fat
+    }
+
+Arrow function with one parameter----->
+var fun = a => { code }
+
+Arrow function with implicit return----->
+
+
+parameters and Arguments------>
+function abcd(parameter){
+    code
+}
+abcd(Arguments)
+
+
+default parameters----->
+function abcd(a=12){code}
+abcd()
+
+
+rest parameters----->
+function abcd(a,b,c,...rest){ code }
+abcd(1,2,3,4,5,6,7,8,9);
+
+
+first class function---> function can be used as Arguments (jahan jahan value aa sakti wahan function use ho sakta hai)
+
+defining and Invoking functions----> call karna
+
+
+hoisting concept----> saare variable and functions ke declaration ko top pe pahocha deta hai 
+
+Function hoisting--->
