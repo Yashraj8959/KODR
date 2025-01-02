@@ -95,3 +95,23 @@ defining and Invoking functions----> call karna
 hoisting concept----> saare variable and functions ke declaration ko top pe pahocha deta hai 
 
 Function hoisting--->
+
+Arrays [] and Array Methods-------> let Array[1,2,3,4,5]
+ Creating and Accessing Elements , for of----->  for(let x of Array){console.log(x)}
+ Destructing let [a,b] = Array
+ push()-----> add, pop()--> remove last value, 
+ shift() ---> remove first value, unshift(), 
+ splice()---> remove indexed value, 
+ sort(), reverse(), indexOf(), lastIndexOf(), includes(), findIndex(), find(), some(), every(), findIndex(), find(), 
+ forEach(),
+map()----> for Creating new array of same size with some changes in old array, 
+reduce() ----> let ans = Array.reduce(function(acc, val){
+    
+},2), 
+filter()----> naya array same/less size ka banata hai, reduceRight(), 
+
+
+ object and object Methods
+ Creating and Accessing object
+ for in Loop
+ defining methods in objects
