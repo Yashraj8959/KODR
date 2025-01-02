@@ -1,0 +1,1 @@
+preventDefault() --> it prevents default behavior of any tag
