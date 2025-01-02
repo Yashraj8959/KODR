@@ -1,0 +1,14 @@
+oops ----->
+
+
+object ---> real world entity or instance of a class
+class ---> blueprint or template for creating objects, customize data structure for holding different values
+
+() - method/function
+{} - object / scope
+[] -  Array
+<> - angular
+
+return --> terminate the function
+
+this ---> it denotes current outer lexical environment (object {})
