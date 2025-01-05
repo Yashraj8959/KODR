@@ -1,1 +1,54 @@
 preventDefault() --> it prevents default behavior of any tag
+
+
+useEffect()---------->
+
+What is useEffect?
+
+Imagine useEffect as a special side effect hook in React.
+Side effects are actions that go beyond simply rendering the component. They can involve:
+Fetching data from an API
+Setting up subscriptions (like listening for events)
+Manipulating the DOM directly (though this should generally be avoided)
+Logging something to the console
+How does useEffect work?
+
+Triggers: useEffect runs after the component renders on the screen.
+Cleanup: If you return a function within useEffect, that function will be called before the component re-renders. This is crucial for cleaning up things like subscriptions or event listeners to prevent memory leaks.
+Example:
+
+JavaScript
+
+import { useState, useEffect } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // This effect will run after the component renders 
+    // and whenever the 'count' state changes
+    console.log('Count has changed:', count);
+
+    // Cleanup function: This will run before the next render
+    return () => {
+      console.log('Cleaning up...'); 
+    };
+  }, [count]); // <-- This dependency array is important!
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+Key Points:
+
+Dependency Array: The second argument to useEffect is an array.
+If the array is empty ([]), the effect will run only once after the initial render.
+If the array includes a value (like [count] in the example), the effect will run again whenever that value changes.
+In simpler terms:
+
+useEffect helps you manage side effects that happen alongside your component's rendering.
+It lets you do things like fetch data, subscribe to events, and clean up after yourself.
+The dependency array controls when the effect should re-run.
