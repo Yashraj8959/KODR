@@ -1,7 +1,7 @@
 preventDefault() --> it prevents default behavior of any tag
 
 
-useEffect()---------->
+useEffect()---------------------------------------------------->
 
 What is useEffect?
 
@@ -52,3 +52,136 @@ In simpler terms:
 useEffect helps you manage side effects that happen alongside your component's rendering.
 It lets you do things like fetch data, subscribe to events, and clean up after yourself.
 The dependency array controls when the effect should re-run.
+
+
+
+
+Props in React-------------------------------------------->
+
+What are Props?
+
+Props (short for "properties") are a way to pass data from a parent component to a child component in React.
+Think of them as the "ingredients" that a child component needs to function.
+How do they work?
+
+When you create a child component, you can define what props it expects to receive.
+In the parent component, you pass the necessary data as attributes to the child component.
+Example:
+
+JavaScript
+
+// Child Component (MyButton.js)
+function MyButton({ label, onClick }) { 
+  return (
+    <button onClick={onClick}>{label}</button>
+  );
+}
+
+// Parent Component (App.js)
+function App() {
+  const handleClick = () => {
+    console.log("Button clicked!");
+  };
+
+  return (
+    <div>
+      <MyButton label="Click Me" onClick={handleClick} /> 
+    </div>
+  );
+}
+In this example:
+
+MyButton component expects two props: label (the text on the button) and onClick (a function to be called when the button is clicked).
+App component passes the label as "Click Me" and the handleClick function as the onClick prop to the MyButton component.
+Key Points:
+
+Props are read-only in the child component. You cannot directly modify props within the child component.
+Props are essential for building reusable and modular components in React.
+By passing data through props, you create a clear and organized flow of information within your React application.
+In simpler terms:
+
+Imagine props as gifts that a parent component gives to its child component.
+The child component uses these gifts to do its job.
+The parent component decides what gifts to give, but the child component cannot change those gifts.
+
+
+1. Children
+
+What are Children?
+
+In React, children refers to any content that is placed between the opening and closing tags of a component.
+This can be:
+Text: Simple text content.
+Other Components: You can render other React components as children.
+JSX: Any valid JSX expression.
+Example:
+
+JavaScript
+
+function MyComponent({ title }) {
+  return (
+    <div>
+      <h1>{title}</h1> 
+      <p>This is some content.</p> 
+    </div>
+  );
+}
+In this example, the <h1> and <p> elements are considered "children" of the MyComponent.
+
+2. Lists
+
+Rendering Lists:
+
+You often need to render a list of items (e.g., items in an array).
+React provides a way to efficiently render lists using the map() method.
+Example:
+
+JavaScript
+
+const items = ['item1', 'item2', 'item3'];
+
+function MyList() {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item}>{item}</li> 
+      ))}
+    </ul>
+  );
+}
+3. Keys
+
+Why are Keys Important?
+
+When React renders a list, it needs to efficiently track which items have changed, been added, or removed.
+Keys help React identify each item in the list uniquely.
+Key Requirements:
+
+Keys should be:
+Unique: Each item in the list must have a unique key.
+Stable: The key for a given item should not change over time.
+Preferably from your data: If possible, use a unique identifier from your data source (e.g., an ID from your API).
+Example:
+
+JavaScript
+
+const items = [
+  { id: 1, name: 'item1' },
+  { id: 2, name: 'item2' },
+  { id: 3, name: 'item3' },
+];
+
+function MyList() {
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id}>{item.name}</li> 
+      ))}
+    </ul>
+  );
+}
+In simpler terms:
+
+Children: The content that a component "holds" or "contains."
+Lists: A way to efficiently render multiple items in React.
+Keys: Unique identifiers for each item in a list, helping React track changes efficiently.
