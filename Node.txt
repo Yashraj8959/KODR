@@ -1,0 +1,27 @@
+import and export ---------------------------->
+esm--------> esmascript module (new)
+cJs--------> common js  (old )
+
+
+cjs----->
+require() -----> function for import
+module.exports-----> function for export
+
+file1
+let a = 12;
+let b = 20;
+module.exports = a;
+module.exports.b = 20;
+
+file2
+require(./file1)
+console.log(a);
+
+
+
+Node js----------------------------------------------------->
+nodejs[wrapper of js {google chrome engine(v8)}]
+Basically its a wrapper of js on the top of cpp
+we can only use the JavaScript in nodejs and can't use the browser features like alert(), dom, prompt effect
+
+Nodejs is a runtime environment that supports js to write backend
