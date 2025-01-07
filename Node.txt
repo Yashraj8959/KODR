@@ -25,3 +25,20 @@ Basically its a wrapper of js on the top of cpp
 we can only use the JavaScript in nodejs and can't use the browser features like alert(), dom, prompt effect
 
 Nodejs is a runtime environment that supports js to write backend
+
+Internet---------------------------------------------------->
+devices emits radio waves  ->  nearest towes  ->  electric signals  ->  ISP(internet service provider i.e, Airtel,jio)  -> checks  ->  pass  -> receiver
+the smallest unit in which the data travels is packets
+
+ISP provides IP address and if internet is turned off the ip address goes away
+
+Server---------------------->
+server is a computer that provides services to the client, Basically it's a programmed computer that has internet and live 
+
+IP address and Mac address ----------------------------------->
+IP address is a unique address of a device on the internet
+Mac address is a unique address of a device on the network
+
+
+DNS --------------------------------------------->
+DNS is a service that translates the domain name to the IP address
