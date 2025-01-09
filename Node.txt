@@ -42,3 +42,37 @@ Mac address is a unique address of a device on the network
 
 DNS --------------------------------------------->
 DNS is a service that translates the domain name to the IP address
+
+
+http & HTTPS ------------------------>
+http is a protocol that is used to transfer data between the client and server
+HTTPS is a protocol that is used to transfer data between the client and server over a secure connection
+
+fs (file system)--------------------------------------------->
+fs is a module in nodejs that provides an interface to the file system
+
+mkdir --> makeing file and folders
+writeFile --> write files
+readfile --> access files
+readdir --> access folders
+unlink --> for file delete
+rm --> remove folder( empty or recursice : true)
+
+const fs = require('fs');
+fs.mkdir("huihu", function(err) {
+    if (err) return console.error(err);
+    console.log('Directory created!');
+    });
+fs.readfile("./huihu", utf-8, function(err, data){
+    if (err) return console.error(err);
+    console.log(data);
+})
+
+Dirent -- > it is data structure for storing file data 
+fs.readdir("./huihu", {withFileTypes: true}, function(err, files){
+    if (err) return console.error(err);
+    files.forEach(function(file){
+        file.isDirectory() ? console.log(`${file.name} folder`) : console.log(`${file.name} file`);
+        });
+        })
+
