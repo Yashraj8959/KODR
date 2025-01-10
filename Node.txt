@@ -76,3 +76,10 @@ fs.readdir("./huihu", {withFileTypes: true}, function(err, files){
         });
         })
 
+port ------------------------------>
+port is a number that is used to identify a process running on a computer
+port 80 is used for http
+port 443 is used for https
+port 27017 is used for mongodb
+127.0.0.1 is the IP address of our own system 
+localhost works the same for our local system
