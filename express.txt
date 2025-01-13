@@ -1,0 +1,8 @@
+express server--------------------------------------->
+npm init
+npm i express
+create app.js file
+requre express
+app.listen
+app.get // setting routes
+
