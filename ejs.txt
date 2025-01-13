@@ -1,0 +1,14 @@
+install ejs ---> npm i ejs
+
+ejs------------------->
+### EJS (Embedded JavaScript) Template Engine
+EJS is a popular template engine for Node.js that allows you to embed JavaScript code in your HTML
+
+app.set('view engine', 'ejs');
+
+setup a views folder 
+app.get('/',function(req,res){
+    res.render("index");
+})
+
+<%= %>  ----------------- 
