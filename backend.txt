@@ -1,0 +1,28 @@
+Folder structure ---------------------------------->
+
+backend/
+├── server.js 
+├── src/
+│   ├── app.js
+│   ├── routes/
+│   │   └── index.routes.js
+│   └── controllers/
+│       └── index.controller.js
+├── package.json
+
+
+npm init
+main entry point file in package.json, it may be sever.js, index.js, app.js etc
+
+Backend------------------>   
+
+    server.js--> it mainly starts the server and connects to database by requiring app.js
+    src ------------>
+
+        app.js--> it contains the express server, express config (middlewares, routes) [/,/users,/posts,/products]
+
+        routes---------------------->
+            index.routes.js--->     require express and get routes by importing controllers and use the routes in app.js, export the router also
+
+        controllers------->
+            index.controller.js--->it contains the functions to perform CRUD operations
