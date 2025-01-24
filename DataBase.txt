@@ -26,3 +26,18 @@ mongodb://localhost:27017/ --> connects to the local MongoDB server
 27017 --> port number
 kodr --> name of the database
 
+CRUD operations in MongoDB
+1. Create: Insert a new document into the collection.
+    model.Create()
+    db.collection.insertOne()
+    db.collection.insertMany()
+2. Read: Retrieve a document from the collection.
+    db.collection.find()
+3. Update: Modify an existing document in the collection.
+    db.collection.updateOne()
+    db.collection.updateMany()
+    db.collection.replaceOne()
+4. Delete: Remove a document from the collection.
+    db.collection.deleteOne()
+    db.collection.deleteMany()
+
