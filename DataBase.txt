@@ -1,0 +1,28 @@
+Database Types:
+1. Relational:
+    - Uses structured query language (SQL) for defining and manipulating data.
+    - Data is organized into tables (rows and columns).
+    - Examples: MySQL, PostgreSQL, Oracle, SQL Server.
+
+2. Non-relational (NoSQL):
+    - Does not use SQL for data manipulation.
+    - Data can be stored in various formats such as key-value pairs, documents, graphs, or wide-columns.
+    - Examples: MongoDB, Cassandra, Redis, Neo4j.
+
+MongoDB----------------------->
+MongoDB is a NoSQL database that uses a document-oriented data model. It stores data in JSON
+-like documents, making it easy to work with semi-structured data.
+
+cloud url structure----->
+mongodb+srv://ykushwah7828:<db_password>@kodr.88nsf.mongodb.net/
+mongodb+srv:// --> connects to the mongodb Servers
+mongodb:// --> connects to the local MongoDB server
+db_password --> password for the database
+kodr.88nsf.mongodb.net/ --> name of the cluster
+ykushwah7828 --> name of the user
+
+mongodb://localhost:27017/kodr
+mongodb://localhost:27017/ --> connects to the local MongoDB server
+27017 --> port number
+kodr --> name of the database
+
