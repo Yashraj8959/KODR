@@ -14,12 +14,13 @@ MongoDB is a NoSQL database that uses a document-oriented data model. It stores 
 -like documents, making it easy to work with semi-structured data.
 
 cloud url structure----->
-mongodb+srv://ykushwah7828:<db_password>@kodr.88nsf.mongodb.net/
+mongodb+srv://ykushwah7828:<db_password>@kodr.88nsf.mongodb.net/db_name
 mongodb+srv:// --> connects to the mongodb Servers
 mongodb:// --> connects to the local MongoDB server
 db_password --> password for the database
 kodr.88nsf.mongodb.net/ --> name of the cluster
 ykushwah7828 --> name of the user
+db_name --> name of the database
 
 mongodb://localhost:27017/kodr
 mongodb://localhost:27017/ --> connects to the local MongoDB server
