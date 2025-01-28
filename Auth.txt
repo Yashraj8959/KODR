@@ -1,0 +1,18 @@
+Authentication---------------->
+Authentication is the process of verifying the identity of a user or service.
+
+token based authentication is a process where the user or service is authenticated by verifying the token provided by the user or service. like JWT, OAuth, etc.
+e.g. (like a user have a card and he/she is using that card to verify his/her identity)
+session based authentication is a process where the user or service is authenticated by verifying the session provided by the user or service. like cookies, etc.
+e.g. (like a facial recognition system is used to verify the identity of a person)
+
+Authorization----------------->
+Authorization is the process of determining what a user or service is allowed to do.
+
+validation--------------------->
+validation is the process of checking if something meets the required rules or constraints.
+
+
+verification------------------>
+verification is the process of checking if something is correct or true.
+
