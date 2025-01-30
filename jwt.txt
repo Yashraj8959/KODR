@@ -28,3 +28,4 @@ JWT.verify() method takes 3 parameters: token, secret key, and options.
     token: The encrypted data.
     secret key: The key used to decrypt the data.
     options: Additional options like the algorithm used to decrypt the data.
+    
