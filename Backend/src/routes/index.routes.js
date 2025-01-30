@@ -1,11 +1,12 @@
 const express = require('express')
-const { indexController, aboutController } = require('../controllers/index.controller')
-const { getProfileController } = require('../controllers/user.controller')
+const { indexController, aboutController, registerController, getUsersController, updateUserController } = require('../controllers/index.controller')
 const router = express.Router()
 
 router.get('/', indexController)
 router.get('/about', aboutController )
-router.get('/users/profile', getProfileController )
+router.get('/register', registerController )
+router.get('/getUsers', getUsersController )
+router.get('/updateUser', updateUserController )
 
 module.exports = router;
 
