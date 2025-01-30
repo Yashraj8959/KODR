@@ -6,10 +6,8 @@ backend/
 │   ├── app.js
 │   ├── routes/
 │   │   └── index.routes.js
-│   ├── controllers/
-│   |   └── index.controller.js
-|   └── db/
-│       └── db.js  
+│   └── controllers/
+│       └── index.controller.js
 ├── package.json
 
 
@@ -28,6 +26,3 @@ Backend------------------>
 
         controllers------->
             index.controller.js--->it contains the functions to perform CRUD operations
-
-        db ---------------->
-            db.js------>  
