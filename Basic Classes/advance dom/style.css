@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+}
+
+.cursor {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(70, 70, 70);
+  border-radius: 50%;
+  z-index: 1000;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.cursor:hover {
+  display: block;
+  transform: scale(1.5);
+  opacity: 0.8;
+}
+
+img {
+  position: absolute;
+  height: 30vh;
+  z-index: 500;
+}
+
+.circle {
+  height: 30vh;
+  width: 30vh;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */

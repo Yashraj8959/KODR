@@ -1,0 +1,30 @@
+JSON Web Token (JWT) is a JSON-based access token that is used to authenticate and authorize a user to access a protected resource. 
+It is a compact, URL-safe means of representing claims to be transferred between two parties. 
+The token is digitally signed and contains a payload that can be verified and trusted.
+
+
+To create a JWT, you need to follow these steps:
+1. Create a header that specifies the algorithm used to sign the token.
+2. Create a payload that contains the claims you want to include in the token.
+3. Sign the token using the header, payload, and a secret key.
+4. Send the token to the client, who can then use it to access protected resources.
+5. Verify the token on the server by checking the signature and decoding the payload.
+6. If the token is valid, grant the client access to the requested resource.
+7. If the token is invalid, deny access to the resource.
+8. Optionally, you can include an expiration time in the payload to limit the token's validity.
+9. You can also include additional claims in the payload to provide more information about the user or the token itself.
+10. Make sure to keep the secret key secure to prevent unauthorized access to your resources.
+
+
+Overall, JSON Web Tokens are a secure and efficient way to authenticate and authorize users in web applications.
+
+
+To encrypt the data we use JWT.sign() method and to decrypt the data we use JWT.verify() method.
+JWT.sign() method takes 3 parameters: payload, secret key, and options.
+    payload: The data we want to encrypt.
+    secret key: The key used to encrypt the data.
+    options: Additional options like the algorithm used to encrypt the data.
+JWT.verify() method takes 3 parameters: token, secret key, and options.
+    token: The encrypted data.
+    secret key: The key used to decrypt the data.
+    options: Additional options like the algorithm used to decrypt the data.
