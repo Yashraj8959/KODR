@@ -1,0 +1,87 @@
+middlewares------------------->
+middlewares are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+
+middlewares are used to perform tasks like:
+    1. Execute any code.
+    2. Make changes to the request and the response objects.
+    3. End the request-response cycle.
+    4. Call the next middleware function in the stack.
+
+builtIn middlewares------------------->
+Express provides a set of built-in middlewares that can be used to perform common tasks like parsing the request body, serving static files, and handling errors.
+
+Some of the built-in middlewares provided by Express are:
+    1. express.json(): This middleware is used to parse JSON-encoded request bodies.
+    2. express.urlencoded(): This middleware is used to parse URL-encoded request bodies.
+    3. express.static(): This middleware is used to serve static files like images, CSS, and JavaScript files.
+    4. express.Router(): This middleware is used to create modular route handlers.
+    5. express.errorHandler(): This middleware is used to handle errors in the application.
+
+custom middlewares------------------->
+In addition to the built-in middlewares, Express allows you to create custom middlewares to perform specific tasks in your application.
+
+To create a custom middleware, you need to define a function that takes three parameters: req, res, and next. The req parameter represents the request object, the res parameter represents the response object, and the next parameter represents the next middleware function in the stack.
+
+Here is an example of a custom middleware that logs the request method and URL:
+```javascript
+function logger(req, res, next) {
+    console.log(`${req.method} ${req.url}`);
+    next();
+}
+```
+
+You can use the custom middleware in your application by passing it as an argument to the app.use() method:
+```javascript
+app.use(logger);
+```
+third party middlewares------------------->
+In addition to the built-in and custom middlewares, Express allows you to use third-party middlewares to add additional functionality to your application.
+
+Some popular third-party middlewares for Express are:
+    1. body-parser: This middleware is used to parse request bodies.
+    2. cookie-parser: This middleware is used to parse cookie headers.
+    3. morgan: This middleware is used to log HTTP requests.
+    4. helmet: This middleware is used to secure your Express application by setting various HTTP headers.
+    5. cors: This middleware is used to enable Cross-Origin Resource Sharing (CORS) in your application.
+
+To use a third-party middleware in your application, you need to install it using npm and then require it in your application:
+```javascript
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+```
+The above code installs and uses the body-parser middleware to parse JSON-encoded request bodies.
+
+Overall, middlewares are an essential part of Express applications as they allow you to add functionality to your application and customize the request-response cycle. You can use built-in, custom, and third-party middlewares to perform various tasks and enhance the functionality of your application.
+
+App Level Middleware------------------->
+App level middleware is a middleware that is bound to the application object using the app.use() method. It is executed for every request that is made to the application.
+
+Here is an example of an app level middleware that logs the request method and URL for every request:
+```javascript
+app.use(function(req, res, next) {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
+```
+Router Level Middleware------------------->
+Router level middleware is a middleware that is bound to a specific router using the router.use() method. It is executed for every request that is made to the router.
+
+Here is an example of a router level middleware that logs the request method and URL for every request to a specific router:
+```javascript
+const router = express.Router();
+router.use(function(req, res, next) {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
+```
+Error Handling Middleware------------------->
+Error handling middleware is a special type of middleware that is used to handle errors that occur during the request-response cycle. It is defined with four parameters: err, req, res, and next.
+
+Here is an example of an error handling middleware that logs the error and sends a response with a status code of 500:
+```javascript
+app.use(function(err, req, res, next) {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+```
+
