@@ -1,0 +1,48 @@
+Multer----------------------------------------->
+Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+
+//   utils/multer.js
+
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '..','..', 'public'));
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + '-' + file.originalname);
+    }
+});
+
+// console.log(path.extname(file.originalname))
+const upload = multer({ storage : storage });
+
+module.exports = upload;
+
+// app.js
+
+const express = require('express');
+const upload = require('./utils/multer')
+const app = express();
+
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static('public'));  // Serving static files from public folder
+
+app.get('/', (req, res) => {
+    res.json({ message: 'Welcome to my API!' });
+});
+
+app.post('/upload', upload.any("myfile"), (req, res) => {
+    res.send({ message: 'File uploaded successfully!', files: req.files });
+})
+
+module.exports = app;
+
+
+upload.any("myfile") is used to handle multiple files uploaded at once. The "myfile" is the name of the input field in the form where the file is uploaded.
+upload.single("myfile") is used to handle a single file uploaded at once. The "myfile" is the name of the input field in the form where the file is uploaded.
+upload.array("myfile", 10) is used to handle multiple files uploaded at once, but with a limit of 10 files. The "myfile" is the name of the input field in the form where the files are uploaded.
+upload.field("myfile") is used to handle a single file uploaded along with other form data. The "myfile" is the name of the input field for the file, and "otherData" is the name of the input field for the other form data.
