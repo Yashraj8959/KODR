@@ -1,6 +1,35 @@
     0.  what is javascript?
+			JavaScript is a versatile programming language which means 
+			it is capable of being used in different ways and in different environment like web browser, mobile app, server side and even in desktop application.
+			it is primarily used for add interactivity and dynamic behavior in websites as it can runs on client side(means the processing happens on the user's computer, rather than on the web server).
+			it is high level(abstracts away many of the complexities of lower-level languages), 
+			interpreted(code is executed line by line), 
+			dynamically typed(don't have to explicitly declare the data type of a variable. The JavaScript engine infers the type at runtime) language
+
     1.  What are the different data types in JavaScript?
+			JS has two main categories of data types: Primitive and non-primitive(of reference)
+				Primitive data types are immutable (means their values cannot be changed directly)
+				and are stored directly in memory.
+					number, string, boolean, null, undefined, symbol, bigInt
+
+			    Non-primitive date types are mutable (their values can be changed), 
+				and they stored as references to memory locations.
+					object, array and functions
 	2.	What is the difference between var, let, and const?
+				They are the reserve keywords in js for declare variables, but they differ in their scope, hoisting behavior, and mutability.
+				var- function(limited to that entire function) and 
+					global(Global variables are properties of the global object (which is window in browsers and global in Node.js)) scope
+					hoisting - var : undefined
+					mutability - can be reassigned
+				let - Variables declared with let are limited in scope to the block in which they are defined. 
+				      A block is a section of code enclosed in curly braces {} (e.g., inside an if statement, a for loop, or a simple block).
+					  hoisting - let: not defined
+					  mutability - can be reassigned
+				const - variables declared with const are also block-scoped.
+						hoisting - let: not defined
+					    mutability - can be reassigned
+					The word "variable" in general programming terms, a "variable" is a named storage location in memory whose value can be changed (vary) during the execution of a program.
+
 	3.	Explain the concept of hoisting in JavaScript.
 	4.	What is the difference between == and ===?
 	5.	What are truthy and falsy values in JavaScript?
@@ -11,10 +40,3 @@
 	10.	What is the difference between forEach, map, and filter?
 
 
-    
-higher order functions
-pure functions
-impure functions
-callback functions
-first class functions
-function with implicit returns
