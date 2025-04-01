@@ -1,0 +1,20 @@
+    0.  what is javascript?
+    1.  What are the different data types in JavaScript?
+	2.	What is the difference between var, let, and const?
+	3.	Explain the concept of hoisting in JavaScript.
+	4.	What is the difference between == and ===?
+	5.	What are truthy and falsy values in JavaScript?
+	6.	What is a closure in JavaScript?
+	7.	What is the scope of a variable? Explain block, function, and global scope.
+	8.	What is the difference between undefined and null?
+	9.	What are template literals in JavaScript?
+	10.	What is the difference between forEach, map, and filter?
+
+
+    
+higher order functions
+pure functions
+impure functions
+callback functions
+first class functions
+function with implicit returns
